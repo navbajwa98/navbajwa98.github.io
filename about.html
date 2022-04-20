@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px;
+    }
+
+    .about-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #474e5d;
+      color: white;
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .container::after,
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+    .nav_items{
+      display: inline;
+      list-style: none;
+      
+    }
+    a{
+      color: white;
+      margin-top: 5px;
+    }
+    li{
+      text-decoration: none;
+      margin-top: 5px;
+    }
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+  </style>
+<link rel="stylesheet" href="css/new.css">
+
+<script>
+  $(document).ready(function () {
+      $("#oneD").hover(function () {
+          $("p").css({ "background-color": "yellow", "font-weight": "bold" });
+      });
+  });
+
+  
+</script>
+</head>
+
+<body>
+
+  <div class="about-section">
+    <div style="display: inline;">
+      <div style="display: flex;background-color: blueviolet;">
+
+          <img src="images/logo%20.png" height="50" alt="logo">
+          <p id="oneD" style="margin-left: 5%;"><b style="font-size: 28px;">One direction</b></p>
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="merchandise.html">Merchandise</a>
+        <a href="basket.html">Basket</a>
+       
+      </div>
+     
+  </div>
+
+    
+  </div>
+  <div style="padding: 10px;">
+    <h3>About One-Direction</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse ratione unde fugit dolorum iste natus consectetur
+      aut voluptatibus voluptas autem, cupiditate ad velit quisquam voluptates at vero, quidem voluptatem facere?</p>
+  </div>
+  <h2 style="text-align:center">Our Team</h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="images/pic.PNG" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>Jane Doe</h2>
+          <p class="title">CEO & Founder</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>jane@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="images/pic 2.gif" alt="Mike" style="width:100%">
+        <div class="container">
+          <h2>Mike Ross</h2>
+          <p class="title">Art Director</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>mike@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="images/pic 1.gif" alt="John" style="width:100%">
+        <div class="container">
+          <h2>John Doe</h2>
+          <p class="title">Designer</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>john@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p style="padding: 10px;"><b>Google Map</b></p>
+  <div id="googleMap" style="width:100%;height:400px;"></div>
+
+  <script>
+    function myMap() {
+      var mapProp = {
+        center: new google.maps.LatLng(51.5072, 0.1276),
+        zoom: 5,
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</body>
+
+</html>
